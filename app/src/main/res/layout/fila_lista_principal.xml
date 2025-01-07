@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/border_background"
+    >
+
+    <ImageView
+        android:id="@+id/imageViewProducto"
+        android:layout_width="85dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textViewNombreProducto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Nombre producto"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewProducto"
+        app:layout_constraintStart_toEndOf="@+id/imageViewProducto"
+        app:layout_constraintTop_toTopOf="@+id/imageViewProducto"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textViewCantidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Cantidad: "
+        app:layout_constraintEnd_toEndOf="@+id/textViewNombreProducto"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewNombreProducto"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNombreProducto" />
+
+    <CheckBox
+        android:id="@+id/checkBoxBorrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:buttonTint="#0000FD"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/textViewPrecioUni"
+        app:layout_constraintStart_toEndOf="@+id/textViewCantidadTotal"
+        app:layout_constraintTop_toTopOf="@+id/textViewCantidadTotal"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textViewCantidadTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewCantidad"
+        app:layout_constraintStart_toEndOf="@+id/textViewCantidad"
+        app:layout_constraintTop_toTopOf="@+id/textViewCantidad" />
+
+    <TextView
+        android:id="@+id/textViewPrecioUni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Prec/uni: "
+        app:layout_constraintEnd_toEndOf="@+id/textViewCantidad"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewCantidad"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCantidad" />
+
+    <TextView
+        android:id="@+id/textViewTotalProducto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TOTAL"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewNombreProducto"
+        app:layout_constraintEnd_toEndOf="@+id/checkBoxBorrar"
+        app:layout_constraintStart_toStartOf="@+id/checkBoxBorrar" />
+
+    <TextView
+        android:id="@+id/textViewPrecioUniProducto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewPrecioUni"
+        app:layout_constraintStart_toEndOf="@+id/textViewPrecioUni"
+        app:layout_constraintTop_toTopOf="@+id/textViewPrecioUni" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

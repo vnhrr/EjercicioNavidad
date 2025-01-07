@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/border_background"
+    >
+
+    <ImageView
+        android:id="@+id/imageViewProducto"
+        android:layout_width="85dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textViewNombreProducto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Nombre producto"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewProducto"
+        app:layout_constraintStart_toEndOf="@+id/imageViewProducto"
+        app:layout_constraintTop_toTopOf="@+id/imageViewProducto"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textViewPrecioUni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Prec/uni: "
+        app:layout_constraintEnd_toEndOf="@+id/textViewNombreProducto"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewNombreProducto"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNombreProducto" />
+
+    <TextView
+        android:id="@+id/textViewSeccion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40dp"
+        android:text="Seccion"
+        app:layout_constraintEnd_toEndOf="@+id/textViewPrecioUni"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewPrecioUni"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPrecioUni" />
+
+    <CheckBox
+        android:id="@+id/checkBoxSeleccionado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:buttonTint="#0000FD"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/textViewSeccion"
+        app:layout_constraintStart_toEndOf="@+id/textViewUnidades"
+        app:layout_constraintTop_toTopOf="@+id/textViewNombreProducto" />
+
+    <TextView
+        android:id="@+id/textViewCantidadEditable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="€"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewPrecioUni"
+        app:layout_constraintStart_toEndOf="@+id/textViewPrecioUni"
+        app:layout_constraintTop_toTopOf="@+id/textViewPrecioUni" />
+
+    <TextView
+        android:id="@+id/textViewUnidades"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:background="@color/white"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewSeccion"
+        app:layout_constraintStart_toEndOf="@+id/textViewCantidadEditable"
+        app:layout_constraintTop_toTopOf="@+id/textViewNombreProducto" />
+
+    <Button
+        android:id="@+id/buttonMenos"
+        android:layout_width="43dp"
+        android:layout_height="29dp"
+        android:backgroundTint="#979696"
+        android:gravity="center"
+        android:padding="0dp"
+        android:text="-"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewSeccion"
+        app:layout_constraintEnd_toEndOf="@+id/textViewUnidades"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="@+id/textViewUnidades" />
+
+    <Button
+        android:id="@+id/buttonMas"
+        android:layout_width="43dp"
+        android:layout_height="29dp"
+        android:backgroundTint="#979696"
+        android:gravity="center"
+        android:padding="0dp"
+        android:text="+"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/textViewUnidades"
+        app:layout_constraintStart_toStartOf="@+id/textViewUnidades"
+        app:layout_constraintTop_toTopOf="@+id/textViewNombreProducto" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
